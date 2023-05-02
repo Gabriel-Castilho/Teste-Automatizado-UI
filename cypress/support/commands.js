@@ -43,4 +43,4 @@ Cypress.Commands.add('addProductsOnCart', (quantity,size,color) => {
     cy.get('.single_add_to_cart_button').click();
     cy.get('.dropdown-toggle > .mini-cart-items').should('contain',quantity);
 
-})
+}) 

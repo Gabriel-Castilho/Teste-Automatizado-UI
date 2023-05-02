@@ -21,6 +21,6 @@ describe('Funcionalidade páginas de produtos',()=>{
         let size = ['XS','S','M','L','XL']
         let color =['Blue','Green','Red']
        cy.addProductsOnCart(quantity,size[quantitySize],color[quantityColor]);
-       //cy.addProductsOnCart(quantity);
+       //cy.addProductsOnCart(quantity); 
     })
 })
