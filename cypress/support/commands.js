@@ -1,12 +1,13 @@
 
-
+//Login
 Cypress.Commands.add('login', (user, password) => {
     cy.get('.icon-user-unfollow').click();
     cy.get('#username').type(user);
-    cy.get('#password').type(password);
+    cy.get('#password').type(password,{log:false});
     cy.get('.woocommerce-form > .button').click();
 })
 
+//Register
 Cypress.Commands.add('firstRegister', (email, password, firstName, lastName) => {
     cy.get('.icon-user-unfollow').click();
     cy.get('#reg_email').type(email);
@@ -24,12 +25,11 @@ Cypress.Commands.add('registerWeakPassword', (email, password) => {
     cy.get('#reg_password').type(password);
 })
 
+//Produtos
 Cypress.Commands.add('products', () => {
     cy.get('#primary-menu > .menu-item-629 > a').click();
     cy.get('[class="product-block grid"]').first().click();
 })
-
-
 Cypress.Commands.add('addProductsOnCart', (quantity) => {
     cy.get('#primary-menu > .menu-item-629 > a').click();
     cy.get('[class="product-block grid"]').first().click();
@@ -40,18 +40,3 @@ Cypress.Commands.add('addProductsOnCart', (quantity) => {
     cy.get('.dropdown-toggle > .mini-cart-items').should('contain',quantity);
 
 })
-/*
-/*
- Cypress.Commands.add(('adicionarProduto'),(product)=>{
-    cy.contains(product).click();
-    cy.get('.btn_primary').click();
-    cy.get('[data-test="back-to-products"]').click();
- })
-
- Cypress.Commands.add(('cadastro'),(firstName,lastName,postalCode)=>{
-    cy.get('[data-test="firstName"]').type(firstName);
-    cy.get('[data-test="lastName"]').type(lastName);
-    cy.get('[data-test="postalCode"]').type(postalCode);
-    cy.get('[data-test="continue"]').click();
- })
-*/
