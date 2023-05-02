@@ -37,7 +37,7 @@ Cypress.Commands.add('addProductsOnCart', (quantity,size,color) => {
     //cy.get('[class="variable-item button-variable-item button-variable-item-XL"]').click();
     cy.get('.button-variable-item-' + size).click();
     cy.get('.button-variable-item-' + color).click();
-    //cy.get('[class="variable-item button-variable-item button-variable-item--'+color+']"').click();
+    //cy.get('[class="variable-item button-variable-item button-variable-item-'+color+']"').click();
     //cy.get('[class="variable-item button-variable-item button-variable-item-Red"]').click();
     cy.get('.input-text').clear().type(quantity);
     cy.get('.single_add_to_cart_button').click();
