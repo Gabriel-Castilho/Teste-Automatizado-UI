@@ -25,16 +25,20 @@ Cypress.Commands.add('registerWeakPassword', (email, password) => {
     cy.get('#reg_password').type(password);
 })
 
-//Produtos
+//Products
 Cypress.Commands.add('products', () => {
     cy.get('#primary-menu > .menu-item-629 > a').click();
     cy.get('[class="product-block grid"]').first().click();
 })
-Cypress.Commands.add('addProductsOnCart', (quantity) => {
+Cypress.Commands.add('addProductsOnCart', (quantity,size,color) => {
     cy.get('#primary-menu > .menu-item-629 > a').click();
     cy.get('[class="product-block grid"]').first().click();
-    cy.get('[class="variable-item button-variable-item button-variable-item-M"]').click();
-    cy.get('[class="variable-item button-variable-item button-variable-item-Blue"]').click();
+    //cy.get('[class="variable-item button-variable-item button-variable-item-'+size+']"').click();
+    //cy.get('[class="variable-item button-variable-item button-variable-item-XL"]').click();
+    cy.get('.button-variable-item-' + size).click();
+    cy.get('.button-variable-item-' + color).click();
+    //cy.get('[class="variable-item button-variable-item button-variable-item--'+color+']"').click();
+    //cy.get('[class="variable-item button-variable-item button-variable-item-Red"]').click();
     cy.get('.input-text').clear().type(quantity);
     cy.get('.single_add_to_cart_button').click();
     cy.get('.dropdown-toggle > .mini-cart-items').should('contain',quantity);
