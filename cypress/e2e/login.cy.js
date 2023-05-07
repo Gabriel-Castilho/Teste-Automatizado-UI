@@ -28,7 +28,7 @@ describe('Funcionalidade Login', () => {
         })
     })
 
-
+ 
     it('Login com senha inválida', () => {
         cy.login('ebac@teste.com', 'teste@teste');
         cy.get('.woocommerce-error').should('contain', 'Erro: a senha fornecida para o e-mail');
