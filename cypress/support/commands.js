@@ -24,7 +24,7 @@ Cypress.Commands.add('registerWeakPassword', (email, password) => {
     cy.get('#reg_email').type(email);
     cy.get('#reg_password').type(password);
 })
-
+ 
 //Products
 Cypress.Commands.add('products', () => {
     cy.get('#primary-menu > .menu-item-629 > a').click();

@@ -12,7 +12,7 @@ describe('Funcionalidade pré cadastro',()=>{
         let lastName = faker.name.lastName();
         cy.firstRegister(emailFaker,'@teste@email#',firstName,lastName);
         cy.get('.woocommerce-message').should('contain','Detalhes da conta modificados com sucesso.');
-    });
+    }); 
 
     it('Deve mostrar mensagem de senha fraca',()=>{
         let emailFaker = faker.internet.email();

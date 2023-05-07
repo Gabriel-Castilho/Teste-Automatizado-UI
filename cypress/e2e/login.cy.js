@@ -10,7 +10,7 @@ describe('Funcionalidade Login', () => {
      })
  */
     it('Deve fazer login com sucesso', () => {
-
+ 
         //login com dados corretos
         cy.login('aluno_ebac@teste.com', 'teste@teste.com');
         cy.get('.page-title').should('contain', 'Minha conta');
