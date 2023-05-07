@@ -1,4 +1,4 @@
-# Teste-Ebac-UI
+# Teste-UI
 
 Testes automatizado de UI utlizando o Cypress
 
