@@ -7,7 +7,7 @@ describe('Funcionalidade páginas de produtos',()=>{
  
     it('Deve selecionar um produto da lista',()=>{
         cy.products();
-    })
+    }) 
 
     it('Deve adicionar um produto no carrinho - comandos',()=>{
         let quantity = Math.floor(Math.random() * (9 - 1) + 1);

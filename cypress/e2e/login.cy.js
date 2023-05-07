@@ -20,7 +20,7 @@ describe('Funcionalidade Login', () => {
         cy.login(profile.username, profile.password);
         cy.get('.page-title').should('contain', 'Minha conta');
     })
-
+ 
     it('Deve fazer login com sucesso - Usando fixture', () => {
         cy.fixture('perfil').then(data =>{
             cy.login(data.username, data.password);

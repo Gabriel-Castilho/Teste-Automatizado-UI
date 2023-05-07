@@ -20,4 +20,4 @@ describe('Funcionalidade pré cadastro',()=>{
         cy.get('[class="woocommerce-password-strength short"]').should('contain','Muito fraca - Digite uma senha segura.');
     });
     
-})
+}) 
